@@ -6,10 +6,10 @@ Visit.destroy_all
 ## Create 2 Park instances and 2 Dog instances below, using what you have in your schema
 ## Don't forget to uncomment after writing your code!
 
-# dog1 = CODE GOES HERE
-# dog2 = CODE GOES HERE
-# park1 = CODE GOES HERE
-# park2 = CODE GOES HERE
+dog1 = Dog.create(name: "Scout", species: "Terrier")
+dog2 = Dog.create(name: "Tooker", species: "Mutt")
+park1 = Park.create(name: "Prospect Park", location: "Brooklyn")
+park2 = Park.create(name: "Central Park", location: "Manhattan")
 
 
 
@@ -18,13 +18,14 @@ Visit.destroy_all
 ## Create 2 instances of Visits- 
 ## dog1 has visited park1 on Monday
 ## dog2 has visited park2 on Tuesday
-
+visit1 = Visit.create(day: "Monday", dog_id: dog1.id, park_id: park1.id)
+visit2 = Visit.create(day: "Tuesday", dog_id: dog2.id, park_id: park2.id)
 
 
 
 
 ## Update the name of dog1 so its new name is "Fluffy" 
-
+dog1.name = "Fluffy"
 
 
 
